@@ -1,9 +1,10 @@
 # example/urls.py
 from django.urls import path
 
-from home.views import index
+from . import views
 
+app_name = "home"
 
 urlpatterns = [
-    path('', index),
+    path('', views.index, name = "index"),
 ]
