@@ -1,8 +1,23 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxDuration": 60
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "api/wsgi.py"
     }
-  ]
+  ],
+  "functions": {
+    "autoescola/views.py": {
+      "maxDuration": 60 
+    }
+  }
 }

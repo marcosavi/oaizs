@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Adicionar Autoescola | Acelere
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <form method="POST" enctype="multipart/form-data" class="form-add-product">
+                {% csrf_token %}
+                <img class="image-banner-ai" src="{% static 'images/banner_ia.png' %}" alt="Banner IA">
+
+                <!-- Seçao 1 - Cadastro Rápido -->
+                <div class="inline-cadastro">
+                    <h1 class="h3-home">Cadastro rápido</h1>
+                    <smal>⏱️ 3 minutos</smal>
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li>Nome autoescola</li></ul>
+                    {{ form.nome }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li>CNPJ</li></ul>
+                    {{ form.cnpj }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li>Endereço</li></ul>
+                    {{ form.endereco }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li>Logo</li></ul>
+                    {{ form.logo }}
+                </div>
+               
+
+                <!-- Seçao 3 - Redes sociais -->
+
+                <hr>
+                <div class="inline-cadastro">
+                    <h1 class="h3-home">Redes sociais</h1>
+                    <smal>⏱️ 1 minuto </smal>
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li><i style="padding-right: 10px;" class="bi bi-instagram"></i>Instagram</li></ul>
+                    {{ form.instagram }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li><i style="padding-right: 10px;" class="bi bi-facebook"></i>Facebook</li></ul>
+                    {{ form.facebook }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <ul><li><i style="padding-right: 10px;" class="bi bi-whatsapp"></i>WhatsApp</li></ul>
+                    {{ form.whatsapp }}
+                </div>
+                <hr> 
+
+                <!-- Seçao 2 - Qualidades -->
+
+                <div class="inline-cadastro">
+                    <h1 class="h3-home">Qualidades</h1>
+                    <smal>⏱️ 2 minutos</smal>
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Qualidade 1</li></ul>
+                    {{ form.beneficio_1 }}
+                    <small class="text-muted">ex: parcele em 24x sem juros</small>
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Qualidade 2</li></ul>
+                    {{ form.beneficio_2 }}
+                    <small class="text-muted">ex: aberto de seg. a sábado</small>
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Qualidade 3</li></ul>
+                    {{ form.beneficio_3 }}
+                    <small class="text-muted">ex: atendimento de qualidade</small>
+                </div>
+
+                <hr>
+                <div class="inline-cadastro">
+                    <h1 class="h3-home">Perguntas frequentes</h1>
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Quais cursos de habilitação vocês oferecem?</li></ul>
+                    {{ form.pergunta_frequente_1 }}
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Como faço para me inscrever?</li></ul>
+                    {{ form.pergunta_frequente_2 }}
+                </div>
+
+                <div class="fieldWrapper qualidade-box">
+                    <ul><li>Quais métodos de pagamento são aceitos?</li></ul>
+                    {{ form.pergunta_frequente_3 }}
+                </div>
+
+              <br>
+
+                <div class="fieldWrapper">
+                    <button class="btn btn-sm btn-main big" type="submit">criar site autoescola</button>
+                </div>
+                
+                
+            </form>
+        </div>
+{% endblock %}
