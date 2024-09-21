@@ -4,7 +4,6 @@
         {% load static %}
         <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
         <link rel="preconnect" href="https://rsms.me/">
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
@@ -20,7 +19,7 @@
               {% if request.user.autoescola == autoescola %}
               <nav class="navbar navbar-expand-lg bg-body-tertiary center">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="{% url 'inicial:index' %}">
+                  <a class="navbar-brand" href="{% url 'home:index' %}">
                     <img class="logo" src="{% static 'images/logo.webp' %}" />
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +33,7 @@
                     </ul>
                     <div class="button-header">
                           <button id="toggleButton" type="button" class="btn btn-sm btn-second">Visualizar site {{autoescola.nome}}</button>
-                          <a href="{% url 'autoescola:logout' %}"><button type="button" class="btn btn-sm btn-second">Desconectar</button></a>
+                          <a href="#"><button type="button" class="btn btn-sm btn-second">Desconectar</button></a>
                     </div>
                   </div>
                 </div>
@@ -62,7 +61,7 @@
             {% else %}
               <nav class="navbar navbar-expand-lg bg-body-tertiary center">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="{% url 'inicial:index' %}">
+                  <a class="navbar-brand" href="#">
                     <img class="logo" src="{% static 'images/logo.webp' %}" />
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,22 +71,22 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                      
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'autoescola:add-autoescola' %}">Criar site autoescola</a>
+                        <a class="nav-link" href="#">Criar site autoescola</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Politicas</a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'politicas:index' %}#politica-de-privacidade">Politica de Privacidade</a></li>
-                          <li><a class="dropdown-item" href="{% url 'politicas:index' %}#termos-de-uso">Termos de Uso</a></li>
-                          <li><a class="dropdown-item" href="{% url 'politicas:index' %}#politica-de-cookies">Política de Cookies</a></li>
+                          <li><a class="dropdown-item" href="#">Politica de Privacidade</a></li>
+                          <li><a class="dropdown-item" href="#">Termos de Uso</a></li>
+                          <li><a class="dropdown-item" href="#">Política de Cookies</a></li>
                         </ul>
                       </li>
                     </ul>
                     <div class="button-header">
                         {% if not user.is_authenticated %}
-                          <a href="{% url 'autoescola:login' %}"><button type="button" class="btn btn-sm btn-second">Acessar plataforma</button></a>
+                          <a href="#"><button type="button" class="btn btn-sm btn-second">Acessar plataforma</button></a>
                         {% else %}
-                          <a href="{% url 'autoescola:logout' %}"><button type="button" class="btn btn-sm btn-second">Sair</button></a>
+                          <a href="#"><button type="button" class="btn btn-sm btn-second">Sair</button></a>
                         {% endif %}
                     </div>
                   </div>

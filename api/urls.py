@@ -6,9 +6,7 @@ from django.conf import settings # type: ignore
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("inicial.urls")),
-    path("autoescola/", include("autoescola.urls")),
-    path("politicas/", include("politicas.urls")),
+    path("", include("home.urls")),
 ]
 
 if settings.DEBUG:

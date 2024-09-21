@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Oaizs{% endblock %}
+
+{% block content %}
+<div class="container text-center first-sec-inicial-index">
+    <div class="row">
+      <div class="col">
+        <h1 class="h1-home">+1,500 questões do DETRAN para praticar</h1>
+        <p class="p-first additional-padding-bottom">Sistema fácil de usar que permite ao aluno se divertir enquanto aprende.</p>
+        <a href="https://wa.me/5548998289645"><button type="button" class="btn btn-sm btn-main big"><i class="bi bi-whatsapp"></i>cadastrar autoescola</button></a>
+      </div>
+      <div class="col">
+        <img class="image-header" src="{% static 'images/feature-simulations.webp' %}">
+      </div>
+    </div>
+</div>
+
+<div class="container text-center gray">
+    <div class="row">
+      <div class="col">
+        <img class="image-header" src="{% static 'images/simulado.png' %}">
+      </div>
+      <div class="col height-index-inicial-sections">
+        <ul class="list-group list-group-flush">
+            <h3 class="h3-home">Ficou fácil aprender</h3>
+            <li class="list-group-item"><i class="bi bi-camera-reels-fill"></i> +300 vídeos curtos selecionados para você</li>
+            <li class="list-group-item"><i class="bi bi-file-earmark-play-fill"></i> +1500 questões comentadas com vídeos</li>
+            <li class="list-group-item"><i class="bi bi-car-front-fill"></i> Bônus sobre baliza e prática para você arrasar</li>
+          </ul>
+          <a href="https://wa.me/5548998289645"><button type="button" class="btn btn-sm btn-whatsapp big"><i class="bi bi-whatsapp"></i>fale conosco</button></a>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
